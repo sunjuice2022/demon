@@ -1,0 +1,61 @@
+table, 
+th,
+td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    text-align: center;
+    font-weight: bold;
+    
+}
+table {
+    color: black;
+}
+
+
+#mytable {
+    color: orange;
+}
+
+.mytable_class {
+    background: rgb(207, 36, 36);
+}
+
+/* ul.info {
+    list-style: none;
+} */
+
+ul.info>li {
+    list-style: none;
+}
+
+ul.info>li li:nth-child(3) {
+    list-style: none;
+}
+
+ol li a {
+    text-decoration: none;
+}
+
+ol li a[target="_blank"] {
+    color: rgb(0, 255, 47);
+}
+
+ol li a[href="https://google.com"] {
+    color: red;
+}
+
+ol li a[href*="google"] {
+    color: rgb(255, 0, 212);
+}
+
+ol li a[href^="httpss"] {
+    color: rgb(255, 0, 212);
+}
+
+ol li a[href$=".com.au"] {
+    background: rgba(164, 24, 177, 0.783);
+}
+
+ol li a[href*="LinkedIn"][href$=".com.au"] {
+    background: rgba(169, 226, 138, 0.862);
+}
