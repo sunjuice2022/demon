@@ -5,6 +5,7 @@
 --background-color: #000;
 --font-color: #fff;
 --overlay-color: #03a9f4;
+--menu-width: 300px;
 }
 
 
@@ -33,6 +34,7 @@ html,body {
     background-color: var(--background-color);
     color: var(--font-color);
     z-index: 2;
+    transform: 0.3s;
 
 }
 .showcase header {
@@ -46,9 +48,17 @@ html,body {
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
+    transform: 0.3s;
 }
 
-.toggle {
+.showcase.active {
+    right: var(--menu-width);
+    width: calc(100% - var(--menu-width))
+  }
+
+
+
+.toggle.active {
     position: relative;
     width: 60px;
     height: 60px;
@@ -59,6 +69,11 @@ html,body {
     cursor: pointer;
     filter: invert(1);
 }
+
+.toggle.active {
+    background-image: url('image/close.svg');
+}
+
 
 .showcase video {
     position: absolute;
@@ -147,8 +162,54 @@ html,body {
 .social li a:hover {
     transform: translateY(-10px);
 }
-.menu {
+/* .menu {
     display: none;
     color: var(--background-color);
     background-color: var(--font-color;
+} */
+
+.menu {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--menu-width);
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul{
+    list-style: none;
+    position: relative;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: var (--overlay-color);
+}
+
+.ex {
+position: absolute;
+top: 0;
+left: 0;
+color: #fff;
+z-index: 99;
+}
+
+
+@media(max-width: 798px) {
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+    .text h1 {
+        font-size: 3rem;
+    }
+
+    .text h2 {
+        font-size: 2rem;
+    }  
 }
